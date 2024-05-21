@@ -7,7 +7,7 @@ class Program
     static void Main()
     {
 
-        var song1 = new Song("Song One", new TimeSpan(0, 2, 30)); // создание экземпляров
+        var song1 = new Song("Song One", new TimeSpan(0, 2, 30)); 
         var song2 = new Song("Song Two", new TimeSpan(0, 3, 45));
         var song3 = new Song("Song Three", new TimeSpan(0, 5, 20));
 
