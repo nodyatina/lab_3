@@ -16,8 +16,8 @@ namespace MusicGroup
         public void PrintTotalDuration()
         {
             var totalDuration = Albums.SelectMany(album => album.SongList)
-                                      .Aggregate(TimeSpan.Zero, (subtotal, song) => subtotal + song.Duration); // добавляем песню в альбом
-            Console.WriteLine($"Total duration of all songs: {totalDuration}"); // то что будет показано 
+                                      .Aggregate(TimeSpan.Zero, (subtotal, song) => subtotal + song.Duration); 
+            Console.WriteLine($"Total duration of all songs: {totalDuration}"); 
         }
     }
 }
