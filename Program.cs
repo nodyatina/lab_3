@@ -16,7 +16,7 @@ class Program
 
         var studio = new Studio<Album>(new List<Album> { album });
 
-        studio.PrintTotalDuration(); // вычисляю длительность треков
+        studio.PrintTotalDuration(); 
         Console.ReadKey();
     }
     
