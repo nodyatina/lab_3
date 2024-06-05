@@ -8,7 +8,8 @@ namespace MusicGroup
 
         public Album(List<Song> songs)
         {
-            SongList = songs;
+            SongList = songs ?? throw new ArgumentNullException(nameof(songs), "List of songs in the album cannot be null");
         }
     }
+
 }
