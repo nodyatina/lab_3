@@ -7,10 +7,21 @@ namespace MusicGroup
         public string Name { get; }
         public TimeSpan Duration { get; }
 
-        public Song (string name, TimeSpan duration)
+        public Song(string name, TimeSpan duration)
         {
+            if (name == null)
+            {
+                throw new ArgumentNullException("не может быть нулл -_-");
+            }
+
+            if (duration == null)
+            {
+                throw new ArgumentNullException(nameof(duration), "не может быть нулл -_-");
+            }
+
             Name = name;
             Duration = duration;
-        }
+            }
+
     }
 }
