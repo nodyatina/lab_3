@@ -10,7 +10,14 @@ namespace MusicGroup
 
         public Studio(List<TAlbum> albums)
         {
-            Albums = albums ?? throw new ArgumentNullException("List of albums cannot be null");
+            if (albums == null)
+            {
+                throw new ArgumentNullException("не может быть нулл 0_0");
+            }
+
+                Albums = albums;
+        }
+            
         }
 
         public void PrintTotalDuration()
@@ -22,7 +29,9 @@ namespace MusicGroup
             }
 
             var totalDuration = Albums.SelectMany(album => album.SongList)
-                                      .Aggregate(TimeSpan.Zero, (subtotal, song) => subtotal + song.Duration);
+                         .Sum(song => song.Duration);
+
             Console.WriteLine($"Total duration of all songs: {totalDuration}");
+
         }
     }
