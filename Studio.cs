@@ -10,7 +10,7 @@ namespace MusicGroup
 
         public Studio(List<TAlbum> albums)
         {
-            Albums = albums ?? throw new ArgumentNullException(nameof(albums), "List of albums cannot be null");
+            Albums = albums ?? throw new ArgumentNullException("List of albums cannot be null");
         }
 
         public void PrintTotalDuration()
