@@ -6,11 +6,11 @@ namespace MusicGroup
     {
         public List<Song> SongList { get; set; }
 
-    public Album(List<Song> songs)
+        public Album(List<Song> songs)
                 {
         if (songs == null)
         {
-        throw new ArgumentNullException(nameof(songs), "ошибка");
+        throw new ArgumentNullException("нулл отстой");
         }
 
         SongList = songs;
