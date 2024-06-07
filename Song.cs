@@ -16,7 +16,7 @@ namespace MusicGroup
 
             if (duration == null)
             {
-                throw new ArgumentNullException(nameof(duration), "не может быть нулл -_-");
+                throw new ArgumentNullException( "не может быть нулл -_-");
             }
 
             Name = name;
