@@ -7,14 +7,14 @@ namespace MusicGroup
         public List<Song> SongList { get; set; }
 
         public Album(List<Song> songs)
-                {
+        {
         if (songs == null)
         {
         throw new ArgumentNullException("нулл отстой");
         }
 
         SongList = songs;
-                }
+        }
 
     }
 
