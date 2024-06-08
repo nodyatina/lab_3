@@ -28,8 +28,8 @@ namespace MusicGroup
                 return;
             }
 
-            var totalDuration = Albums.SelectMany(album => album.SongList)
-                         .Sum(song => song.Duration);
+            var totalDuration = Albums.SelectMany(album => album.SongList) // преобразование коллекции в одну последовательность
+                         .Sum(song => song.Duration); // ямбда-выражение суммировать значение Duration для каждой песни
 
             Console.WriteLine($"Total duration of all songs: {totalDuration}");
 
